@@ -1,0 +1,18 @@
+This component for url.
+<section data-sly-use.model="com.adobe.aem.guides.june.core.models.MultiFieldModel">
+            <div data-sly-test="${model.firstMF && model.firstMF.size != 0}"
+            data-sly-list.firstMF="${model.firstMF}">
+            <p><b>Heading is::</b></p>
+            <p>${firstMF.heading}</p>
+             
+            <div data-sly-test="${firstMF.secondMF && firstMF.secondMF.size != 0}"
+            data-sly-list.secondMF="${firstMF.secondMF}">
+            <p><b>The label is</b></p> 
+            <p>${secondMF.label}</p>
+            <p><b>The url is</b></p> 
+            <p>${secondMF.url}</p>
+            </div>
+            </div>
+ 
+ 
+</section>

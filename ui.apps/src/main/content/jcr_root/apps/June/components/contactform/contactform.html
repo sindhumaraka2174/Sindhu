@@ -1,0 +1,12 @@
+<sly data-sly-use.model="com.adobe.aem.guides.june.core.models.ContactFormModel">
+<form>
+    <!-- Hidden field for edit -->
+    <input type="hidden" id="nodeName" value="${param.node}" />
+
+    <input type="text" id="name" placeholder="Enter Name" /><br><br>
+    <input type="email" id="email" placeholder="Enter Email" /><br><br>
+    <input type="text" id="mobile" placeholder="Enter Mobile" /><br><br>
+
+    <button type="button" onclick="submitForm()">Submit / Update</button>
+</form>
+<script src="/apps/June/clientlibs/clientlib-contactform/js/contactform.js"></script>

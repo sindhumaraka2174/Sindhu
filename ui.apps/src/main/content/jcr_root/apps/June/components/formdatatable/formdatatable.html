@@ -1,0 +1,26 @@
+<sly data-sly-use.model="com.adobe.aem.guides.june.core.models.ContactFormModel">
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Actions</th>
+    </tr>
+
+    <tr data-sly-repeat.user="${model.users}">
+        <td>${user.name}</td>
+        <td>${user.email}</td>
+        <td>${user.mobile}</td>
+        <td>
+            <a href="/content/June/june-test-page.html?node=${user.nodeName}">Edit</a>
+            |
+            <a href="javascript:deleteUser('${user.nodeName}')">Delete</a>
+        </td>
+    </tr>
+
+</table>
+
+</sly>
+
+<script src="/apps/June/clientlibs/clientlib-contactform/js/delete.js"></script>

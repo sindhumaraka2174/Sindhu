@@ -1,0 +1,21 @@
+ Carousel Component
+
+<sly data-sly-use.model="com.adobe.aem.guides.june.core.models.PropertiesModel" />
+<h4>MultiField</h4>
+<ul>
+    <sly data-sly-list.item="${model.items}">
+        <li>
+            <strong>Name:</strong> ${item.text} <br>
+            <strong>Path:</strong> ${item.path}<br>
+
+            <h4> Nested Multifield </h4>
+            <ul>
+                <sly data-sly-list.n="${item.nestedList}">
+                    <li>
+                        <strong>company name:</strong> ${n.nestedText}<br>
+                    </li>
+                </sly>
+            </ul>
+        </li>
+    </sly>
+</ul>

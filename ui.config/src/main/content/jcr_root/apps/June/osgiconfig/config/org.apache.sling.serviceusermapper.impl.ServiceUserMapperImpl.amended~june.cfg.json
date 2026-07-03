@@ -1,0 +1,6 @@
+{
+  "user.mapping": [
+    "june-batch.core:contactService=contact-form-user",
+    "june-batch.core:june-service-user=june-service-user"
+  ]
+}

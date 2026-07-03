@@ -1,0 +1,40 @@
+<sly data-sly-use.model="com.adobe.aem.guides.june.core.models.SidebarModel">
+
+    <!-- HEADER TAB -->
+    <h2>Header</h2>
+       <div>
+       <p><b>Logo Path:</b> ${model.logopath}</p>
+        <p><b>Logo Mobile:</b> ${model.logomobile}</p>
+        <p><b>Logo Link:</b> ${model.logolink}</p>
+        <p><b>Enable Switch:</b> ${model.enableswitch}</p>
+        <hr>
+    </div>
+
+
+    <!-- HEADER LINKS TAB -->
+    <h2>Header Links</h2>
+    <div data-sly-list.link="${model.linkList}">
+        <p><b>Name:</b> ${link.name}</p>
+<img src="${link.image}" alt="hey "width="80" />
+        <hr>
+    </div>
+
+
+    <!-- SIDEBAR NAVIGATION -->
+    <h2>Sidebar Navigation</h2>
+    <div data-sly-list.nav="${model.navigationList}">
+        <p><b>Desktop Icon:</b> ${nav.desktop}</p>
+        <p><b>Mobile Icon:</b> ${nav.mobile}</p>
+
+        <div data-sly-list.nest="${nav.nested}">
+            <p>- <b>Navigation URL:</b> ${nest.navigationurl}</p>
+        </div>
+        <hr>
+    </div>
+
+
+    <!-- REGION -->
+    <h2>Region</h2>
+    <p><b>Selected Region:</b> ${model.country}</p>
+
+</sly>

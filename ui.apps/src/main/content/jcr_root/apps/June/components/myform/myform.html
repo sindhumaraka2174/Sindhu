@@ -1,0 +1,27 @@
+MYFORM COMPONENT
+<sly data-sly-use.model="com.adobe.aem.guides.june.core.models.MyFormModel">
+
+    <div class="form-container">
+        <h2>Form Details</h2>
+
+        <p><strong>Text Field:</strong> ${model.textfield}</p>
+        <p><strong>URL:</strong> <a href="${model.url}" target="_blank">${model.url}</a></p>
+        <p><strong>Path:</strong> ${model.path}</p>
+        <p><strong>Date:</strong> ${model.date}</p>
+        <p><strong>Accepted:</strong> ${model.checkbox ? "No" : "Yes"}</p>
+
+        <button class="aem-btn">${model.buttonlabel}</button>
+        <!-- ✅ Multifield Output -->
+        <div class="multi-section">
+            <h3>Image List</h3>
+            <sly data-sly-list.item="${model.multiList}">
+                <div class="multi-item">
+                    <img src="${item.image}" alt="${item.caption}" style="width:150px; height:auto; border-radius:10px;">
+                    <p>${item.caption}</p>
+                </div>
+            </sly>
+        </div>
+
+    </div>
+
+</sly>

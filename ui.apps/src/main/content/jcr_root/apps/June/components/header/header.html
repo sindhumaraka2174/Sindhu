@@ -1,0 +1,19 @@
+Header Component
+
+<div data-sly-use.model="com.adobe.aem.guides.june.core.models.HeaderModel">
+
+    <h2>Header Component Output</h2>
+
+    <p><b>Path Field:</b> ${model.pathfield}</p>
+    <p><b>Name:</b> ${model.textfield}</p>
+
+    <h3>MultiField Data:</h3>
+    <div data-sly-list.item="${model.items}">
+
+            <b>College Name:</b> ${item.text}<br>
+            <b>Date of birth:</b> ${item.date}<br>
+
+</div>
+    <p><b>B.Tech:</b> ${model.checkbox ? 'Completed ' : 'Not Completed '}</p>
+
+</div>

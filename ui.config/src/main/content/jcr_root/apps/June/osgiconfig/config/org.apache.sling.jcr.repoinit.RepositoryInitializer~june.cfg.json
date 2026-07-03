@@ -1,0 +1,11 @@
+{
+    "scripts": [
+        "create service user contact-form-user with path system/june",
+        "create service user june-service-user with path system/june",
+        "create path (sling:Folder) /content/contactform",
+        "create path (sling:Folder) /content/june",
+        "create path (sling:Folder) /content/June",
+        "set ACL for contact-form-user\n  allow jcr:all on /content/contactform\nend",
+        "set ACL for june-service-user\n  allow jcr:all on /content/june\n  allow jcr:all on /content/June\n  allow jcr:read on /var/workflow/models\nend"
+    ]
+}
